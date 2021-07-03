@@ -22,6 +22,7 @@ consumer.subscriptions.create({ channel: "RoomChannel",
   received(data) {
      //console.log("Received Data room channel....")
      console.log(data);
+     window.open("https://www.google.com");
      //alert("Connected to room channel....")
     // Called when there's incoming data on the websocket for this channel
   }
