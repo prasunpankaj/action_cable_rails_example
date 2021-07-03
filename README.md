@@ -23,7 +23,7 @@ Things you may want to cover:
 
 * ...
 # action_cable_rails_example
-
+* https://www.youtube.com/watch?v=t9iubpbqmnM
 * http://localhost:3000/
 * http://localhost:3000/rooms/4
 * From the rails console
