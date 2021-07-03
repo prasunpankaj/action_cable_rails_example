@@ -3,3 +3,39 @@
 
 <div id="room-id" data-room-id="1">
 </div>
+
+<%= link_to 'Send Notification', pages_index_path, remote: true%>
+
+
+<script type="text/javascript">
+	function openConnection(){
+		return new WebSocket("ws://localhost:3000/cable")
+	}
+
+	document.addEventListener("DOMContentLoaded", () => {
+		const chatWebSocket = openConnection()
+		chatWebSocket.onopen = (event) => {
+			const subscribMsg = JSON.stringify({
+        command: 'subscribe',
+        identifier: JSON.stringify({
+          channel: "ChatMessagesChannel"
+        })
+      })
+
+			chatWebSocket.send(subscribMsg)
+			
+			console.log("Connection has open")
+		}
+
+		chatWebSocket.onmessage = (event) => {
+			//const subscribMsg = {"command":"subscribe","indentifier":"{\"channel\":\"ChatMessageChannel\"}"}
+
+			var received_msg = event.data;
+      //alert("Message is received...");
+      document.write(received_msg)
+      document.write("<br>")
+      console.log(received_msg)
+		}
+
+	})
+</script>
