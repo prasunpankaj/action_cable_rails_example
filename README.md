@@ -24,6 +24,9 @@ Things you may want to cover:
 * ...
 # action_cable_rails_example
 * https://www.youtube.com/watch?v=t9iubpbqmnM
+* https://medium.com/@the.asantiagojr/how-to-setup-actioncable-with-a-rails-api-backend-1f1807c2d908
+* https://guides.rubyonrails.org/association_basics.html#the-has-many-through-association
+* 
 * http://localhost:3000/
 * http://localhost:3000/rooms/4
 * From the rails console
