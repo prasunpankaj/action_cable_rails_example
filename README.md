@@ -23,3 +23,9 @@ Things you may want to cover:
 
 * ...
 # action_cable_rails_example
+
+* http://localhost:3000/
+* http://localhost:3000/rooms/4
+* From the rails console
+
+ActionCable.server.broadcast "room_channel_1", broadcast: "Hello"
