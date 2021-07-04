@@ -6,6 +6,7 @@
 
 <%= link_to 'Send Notification', pages_index_path, remote: true%>
 
+<div id="log">initial content</div>
 
 <script type="text/javascript">
 	function openConnection(){
@@ -28,12 +29,8 @@
 		}
 
 		chatWebSocket.onmessage = (event) => {
-			//const subscribMsg = {"command":"subscribe","indentifier":"{\"channel\":\"ChatMessageChannel\"}"}
-
 			var received_msg = event.data;
-      //alert("Message is received...");
-      document.write(received_msg)
-      document.write("<br>")
+      document.getElementById('log').innerHTML += '<br>'+received_msg;
       console.log(received_msg)
 		}
 

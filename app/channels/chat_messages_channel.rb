@@ -6,6 +6,7 @@ class ChatMessagesChannel < ApplicationCable::Channel
 
   def unsubscribed
     # Any cleanup needed when channel is unsubscribed
+    Rails.logger.info "***Unsubscribed Event Happening here***"
   end
 
   def send_text(data)
